@@ -1,13 +1,11 @@
 package com.example.library.dto;
 
-import lombok.Data;
 import java.time.LocalDate;
 
-@Data
 public class LoanDTO {
     private Long id;
-    private BookDTO book;
-    private UserDTO user;
+    private Long bookId;
+    private Long userId;
     private LocalDate loanDate;
     private LocalDate returnDate;
 
@@ -19,20 +17,20 @@ public class LoanDTO {
         this.id = id;
     }
 
-    public BookDTO getBook() {
-        return book;
+    public Long getBookId() {
+        return bookId;
     }
 
-    public void setBook(BookDTO book) {
-        this.book = book;
+    public void setBookId(Long bookId) {
+        this.bookId = bookId;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUser(UserDTO user) {
-        this.user = user;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public LocalDate getLoanDate() {
